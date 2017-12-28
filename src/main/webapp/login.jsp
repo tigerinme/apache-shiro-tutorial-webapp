@@ -44,10 +44,12 @@ body {
 							accept-charset="UTF-8" role="form">
 							<fieldset>
 								<div class="form-group">
+									<!-- shiro authc filter 会自动寻找这个属性  -->
 									<input class="form-control" placeholder="Username or Email"
 										name="username" type="text">
 								</div>
 								<div class="form-group">
+									<!-- 同username -->
 									<input class="form-control" placeholder="Password"
 										name="password" type="password" value="">
 								</div>
@@ -60,6 +62,8 @@ body {
 									value="Login">
 							</fieldset>
 						</form>
+						<!-- 默认的名字就是username、password、remeberMe，但是它们都是可以配置的，FormAuthenticationFilter JavaDoc（http://shiro.apache.org/static/1.3.2/apidocs/org/apache/shiro/web/filter/authc/FormAuthenticationFilter.html） -->
+						<!-- 登录成功之后会跳到首页 （contextPath /）you can set the authc.successUrl = /whatever in the INI’s [main] section. -->
 					</div>
 				</div>
 			</div>
